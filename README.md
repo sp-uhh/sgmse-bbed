@@ -3,7 +3,7 @@
 This repository contains the official PyTorch implementations for the 2023 paper:
 
 - *Reducing the Prior Mismatch of Stochastic Differential Equations for Diffusion-based Speech Enhancement* [1]
-
+This repository builds upon our previous work, that can be found here https://github.com/sp-uhh/sgmse
 
 
 ## Installation
@@ -30,6 +30,7 @@ where `your_base_dir` should be a path to a folder containing subdirectories `tr
 ```bash
 python train.py --base_dir <your_base_dir> --batch_size 16 --backbone ncsnpp --sde bbed --t_eps 0.03 --gpus 1 --num_eval_files 10 --spec_abs_exponent 0.5 --spec_factor 0.15 --loss_abs_exponent 1 --loss_type mse --k 2.6 --theta 0.53
 ```
+To get the training set, we refer to https://github.com/sp-uhh/sgmse
 
 
 
