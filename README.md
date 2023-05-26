@@ -1,4 +1,4 @@
-# Speech Enhancement and Dereverberation with Diffusion-based Generative Models
+# Reducing the Prior Mismatch of Stochastic Differential Equations for Diffusion-based Speech Enhancement
 
 This repository contains the official PyTorch implementations for the 2023 paper:
 
@@ -7,7 +7,6 @@ This repository contains the official PyTorch implementations for the 2023 paper
 
 
 ## Installation
-
 - Create a new virtual environment with Python 3.8 (we have not tested other Python versions, but they may work).
 - Install the package dependencies via `pip install -r requirements.txt`.
 - If using W&B logging (default):
@@ -20,14 +19,13 @@ This repository contains the official PyTorch implementations for the 2023 paper
 
 
 ## Training
-
 Training is done by executing `train.py`. A minimal running example with default settings (as in our paper [1]) can be run with
 
 ```bash
 python train.py --base_dir <your_base_dir>
 ```
 
-where `your_base_dir` should be a path to a folder containing subdirectories `train/` and `valid/` (optionally `test/` as well). Each subdirectory must itself have two subdirectories `clean/` and `noisy/`, with the same filenames present in both. We currently only support training with `.wav` files. To reproduce results in [1] you could use the following training settings:
+where `your_base_dir` should be a path to a folder containing subdirectories `train/` and `valid/` (optionally `test/` as well). Each subdirectory must itself have two subdirectories `clean/` and `noisy/`, with the same filenames present in both. We currently only support training with `.wav` files. To reproduce results in [1] you could use the following training settings on the wsj0-chime3 dataset:
 
 ```bash
 python train.py --base_dir <your_base_dir> --batch_size 16 --backbone ncsnpp --sde bbed --t_eps 0.03 --gpus 1 --num_eval_files 10 --spec_abs_exponent 0.5 --spec_factor 0.15 --loss_abs_exponent 1 --loss_type mse --k 2.6 --theta 0.53
