@@ -49,9 +49,9 @@ python eval.py --test_dir <your_test_dir> --folder_destination <your_enhanced_di
 
 to generate the enhanced .wav files. For instance,
 ```bash
-python eval.py --test_dir <your_test_dir> --folder_destination <your_enhanced_dir> --ckpt <path_to_model_checkpoint> "--N", "30", "--reverse_starting_point", "0.5", "--force_N", "15",
+python eval.py --test_dir <your_test_dir> --folder_destination <your_enhanced_dir> --ckpt <path_to_model_checkpoint> --N 30 --reverse_starting_point 0.5 --force_N 15
 ```
-starts enhancement from 0.5 with 15 reverse steps. By default PC sampler is used with ALD corrector. 
+starts enhancement from 0.5 with 15 reverse steps. By default PC sampler is used with ALD corrector. This would be the result of Tab. 1 last row in [1], when the provided checkpoint is loaded.
 
 
 
