@@ -1,4 +1,4 @@
-# Reducing the Prior Mismatch of Stochastic Differential Equations for Diffusion-based Speech Enhancement
+# SGMSE - Brownian Bridge with Exponential Diffusion Coefficient
 
 This repository contains the official PyTorch implementations for the 2023 paper:
 
@@ -51,7 +51,7 @@ to generate the enhanced .wav files. For instance,
 ```bash
 python eval.py --test_dir <your_test_dir> --folder_destination <your_enhanced_dir> --ckpt <path_to_model_checkpoint> --N 30 --reverse_starting_point 0.5 --force_N 15
 ```
-starts enhancement from 0.5 with 15 reverse steps. This would be the result of Tab. 1 last row in [1], when the provided checkpoint is loaded in the checkpoint folder is loaded. This is the checkpoint that was used to produce the results in [1].
+starts enhancement from 0.5 with 15 reverse steps. This would be the result of Tab. 1 last row in [1], when the provided checkpoint (download from here https://drive.google.com/file/d/1_h7pH6o-j7GV_E69SbRQF2BMRlC8tmz_/view?usp=share_link) is loaded in the checkpoint folder is loaded. This is the checkpoint that was used to produce the results in [1].
 
 
 
