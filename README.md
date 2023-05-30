@@ -29,7 +29,7 @@ python train.py --base_dir <your_base_dir>
 where `your_base_dir` should be a path to a folder containing subdirectories `train/` and `valid/` (optionally `test/` as well). Each subdirectory must itself have two subdirectories `clean/` and `noisy/`, with the same filenames present in both. We currently only support training with `.wav` files. To reproduce results in [1] you could use the following training settings on the wsj0-chime3 dataset:
 
 ```bash
-python train.py --base_dir <your_base_dir> --batch_size 16 --backbone ncsnpp --sde bbed --t_eps 0.03 --gpus 1 --num_eval_files 10 --spec_abs_exponent 0.5 --spec_factor 0.15 --loss_abs_exponent 1 --loss_type mse --k 2.6 --theta 0.53
+python train.py --base_dir <your_base_dir> --batch_size 16 --backbone ncsnpp --sde bbed --t_eps 0.03 --gpus 1 --num_eval_files 10 --spec_abs_exponent 0.5 --spec_factor 0.15 --loss_abs_exponent 1 --loss_type mse --k 2.6 --theta 0.51
 ```
 To get the training set, we refer to [https://github.com/sp-uhh/sgmse](https://github.com/sp-uhh/sgmse/tree/main/preprocessing) and execute create_wsj0_chime3.py.
 
