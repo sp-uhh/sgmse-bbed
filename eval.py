@@ -50,7 +50,8 @@ if __name__ == '__main__':
     noisy_dir = join(args.test_dir, "test", "noisy")
 
     checkpoint_file = args.ckpt
-
+    
+    #please change this directory 
     target_dir = "/export/home/lay/PycharmProjects/ncsnpp/enhanced/{}/".format(
         args.destination_folder)
 
