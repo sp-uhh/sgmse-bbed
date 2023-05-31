@@ -62,9 +62,10 @@ if __name__ == '__main__':
      
  
      if not args.nolog:
-          logger = WandbLogger(project="newloss", entity = 'bunlong', log_model=True, save_dir="logs")
+          #this needs to be changed accordingly to your wandb settings
+          logger = WandbLogger(project="newloss", entity = 'name_to_be_replaced', log_model=True, save_dir="logs")
           logger.experiment.log_code(".")
-          savedir_ck = f'/data2/ncsnpp/logs/{logger.version}'
+          savedir_ck = f'/data2/ncsnpp/logs/{logger.version}' #change your folder, where to save files
           if not os.path.isdir(savedir_ck):
                os.makedirs(os.path.join(savedir_ck))
      else:
